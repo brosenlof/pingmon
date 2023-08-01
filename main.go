@@ -102,7 +102,7 @@ func main() {
 					table.Rows[s.index+1][2] = "never"
 				}
 
-				delta := s.LastRecvTime.Sub(s.LastSendTime)
+				delta := s.LastRecvTime.Sub(s.LastSendTime).Abs()
 
 				// styles
 				table.RowStyles[s.index+1] = ui.NewStyle(ui.ColorGreen)
